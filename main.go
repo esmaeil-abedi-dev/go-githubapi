@@ -25,24 +25,24 @@ type Repo struct {
 	NodeId          string `json:"node_id"`
 	Name            string
 	FullName        string `json:"full_name"`
-	private         bool
-	htmlURL         string `json:"html_url"`
-	description     string
-	fork            bool
+	Private         bool
+	HtmlURL         string `json:"html_url"`
+	Description     string
+	Fork            bool
 	URL             string    `json:"url"`
 	CreatedAt       time.Time `json:"created_at"`
 	UpdatedAt       time.Time `json:"updated_at"`
 	PushedAt        time.Time `json:"pushed_at"`
-	homepage        string
-	size            int
+	Homepage        string    `json:"homepage,emitempty"`
+	Size            int
 	StargazersCount int `json:"stargazers_count"`
 	WatchersCount   int `json:"watchers_count"`
-	language        string
+	Language        string
 	ForksCount      int    `json:"forks_count"`
 	OpenIssuesCount int    `json:"open_issues_count"`
 	MasterBranch    string `json:"master_branch"`
 	DefaultBranch   string `json:"default_branch"`
-	score           int
+	Score           float32
 	Owner           *Owner
 }
 type Owner struct {
